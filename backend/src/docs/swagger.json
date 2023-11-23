@@ -1,0 +1,100 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "title": "Time Converter API",
+    "description": "Voxus Challenge",
+    "version": "1.0.0"
+  },
+  "host": "localhost:8081",
+  "basePath": "/",
+  "schemes": [
+    "http"
+  ],
+  "paths": {
+    "/convert": {
+      "post": {
+        "tags": [
+          "Converter"
+        ],
+        "summary": "Convert time",
+        "description": "",
+        "parameters": [
+          {
+            "name": "convertPayload",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "seconds": {
+                  "type": "number",
+                  "example": 2500000000
+                },
+                "planet": {
+                  "type": "string",
+                  "example": "Earth"
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "input": {
+                  "type": "object",
+                  "properties": {
+                    "seconds": {
+                      "type": "number",
+                      "example": 2500000000
+                    },
+                    "planet": {
+                      "type": "string",
+                      "example": "Earth"
+                    }
+                  }
+                },
+                "output": {
+                  "type": "object",
+                  "properties": {
+                    "conversion": {
+                      "type": "number",
+                      "example": 79.22
+                    },
+                    "calc": {
+                      "type": "number",
+                      "example": 79.22
+                    }
+                  }
+                }
+              },
+              "xml": {
+                "name": "main"
+              }
+            }
+          },
+          "422": {
+            "description": "Unprocessable Entity"
+          },
+          "500": {
+            "description": "Unexpected error",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "message": {
+                  "type": "string",
+                  "example": "internal server error"
+                }
+              },
+              "xml": {
+                "name": "main"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

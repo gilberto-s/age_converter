@@ -1,0 +1,1 @@
+export const TIME_CONVERTER_API_HOST = process.env.REACT_APP_BACKEND_URL || 'http://localhost:8080';

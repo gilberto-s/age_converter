@@ -1,0 +1,114 @@
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+}
+
+.app{
+  width: 100%;
+  height: 100%;
+  position: relative;
+  min-height: 100%;
+  padding-bottom: 5rem;
+  padding: 5vh 5vw 0 5vw;
+}
+
+body{
+  background: white;
+  font-family: 'Montserrat';
+}
+
+.form-box{
+  min-width: 100%;
+  height: 90vh;
+  /* border: dotted #F55A00 5vw; */
+  /* border: 1px solid red; */
+  margin: 0vw;
+  padding: 5vw;
+  background-color: beige;
+
+  /* position:relative for .prevBtn and .nextBtn position:absolute; */
+  position:relative; 
+}
+
+.form-box label{
+  display: block;
+  text-align: center;
+  font-size: 20px;
+  margin: 0 0 2vh 0;
+}
+
+.form-box input, select{
+  display: block;
+  width: 100%;
+  padding: .5rem .8rem .5rem .8rem;
+  margin: .9vw 0;
+  border:0;
+  border-radius: 5px;
+  font-size: 20px;
+}
+
+.form-box button{
+  border: 0; 
+  background-color: #F55A00;
+  padding: .5rem;
+  color: #FFFF;
+  margin: 1rem 0;
+  width: 100%;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: 1s background ease;
+  font-size: 20px;
+}
+
+.result-box {
+  min-width: 100%;
+  height: 10vh;
+  border: dotted #F55A00 5vw;
+  border: 1px solid red;
+  margin: 0vw;
+  padding: 5vw;
+  background-color: beige;
+
+  /* position:relative for .prevBtn and .nextBtn position:absolute; */
+  position:relative; 
+}
+
+.result-box h2 {
+  display: block;
+  text-align: center;
+  font-size: 20px;
+  margin: 0 0 2vh 0;
+}
+
+.loader-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 9999;
+}
+
+.loader {
+  border: 10px solid #f3f3f3;
+  border-top: 10px solid #3498db;
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+} 
